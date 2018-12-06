@@ -1,0 +1,54 @@
+﻿    <!DOCTYPE html>
+    <html>
+    <head>
+    </head>
+    <body>
+        <div class="panel panel-primary">
+            <div class="panel-heading">Cadastrando Cliente</div>
+            <div class="panel-body">
+
+                <div class="input-group col-md-10">
+                    <span class="input-group-btn">
+
+                        <button class="btn btn-default" style="margin-top:20px" type="submit">
+                            <span class="glyphicon glyphicon glyphicon-user"></span>
+                        </button>
+                    </span>
+                    <br />
+                    @Html.TextBox("Usuario", ViewBag.CurrentFilter as string, new { @id = "tags", @class = "form-control", @placeholder = "Digite o nome" })
+                </div>
+
+            <div class="input-group col-md-10">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" style="margin-top:20px" type="submit">
+                        <span class="glyphicon glyphicon glyphicon-home"></span>
+                    </button>
+                </span>
+
+                <br />
+                @Html.TextBox("Endereco", ViewBag.CurrentFilter as string, new { @id = "tags", @class = "form-control", @placeholder = "Digite o enedereço" })
+            </div>
+
+            <div class="input-group col-md-10">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" style="margin-top:20px" type="submit">
+                        <span class="glyphicon glyphicon glyphicon-earphone"></span>
+                    </button>
+                </span>
+                <br />
+                @Html.TextBox("Telefone", ViewBag.CurrentFilter as string, new { @id = "tags", @class = "form-control", @placeholder = "Digite o telefone" })
+            </div>
+
+            <div>
+                <div>
+                    <br />
+                    @Html.ActionLink("Voltar", "Clientes", null, new { data_modal = "", id = "btnVoltar", @class = "btn btn-primary pull-right" })
+                    @Html.ActionLink("Cadastrar", "Cadastrar", null, new { data_modal = "", id = "btnCadastrar", @class = "btn btn-success " })
+                    @Html.ActionLink("Cancelar", "Cadastrar", null, new { data_modal = "", id = "btnCancelar", @class = "btn btn-danger" })
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
